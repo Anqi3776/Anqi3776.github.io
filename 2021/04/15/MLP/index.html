@@ -1,0 +1,1548 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="前沿拓展-wide and deep深度学习推荐系统经典框架  , 博客 技术">
+    <meta name="description" content="努力做个it技术分享者">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>前沿拓展-wide and deep深度学习推荐系统经典框架 | Stella</title>
+    <link rel="icon" type="image/png" href="/medias/G.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Stella" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.jpg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Stella</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.jpg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Stella</div>
+        <div class="logo-desc">
+            
+            努力做个it技术分享者
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/anqi3776" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/anqi3776" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">前沿拓展-wide&deep深度学习推荐系统经典框架 </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                             
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                前沿拓展-wide&deep深度学习推荐系统经典框架
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-15
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-15
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="前沿拓展-wide&deep深度学习推荐系统经典框架"><a href="#前沿拓展-wide&deep深度学习推荐系统经典框架 " class="headerlink" title="前沿拓展-wide&deep深度学习推荐系统经典框架 "></a><center>前沿拓展-wide&deep深度学习推荐系统经典框架 </center></h1>  
+  <p>@<a href="Embedding+MLP">TOC</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20210205040344594.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FucWkzNzc2,size_16,color_FFFFFF,t_70#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1c79d6c81c76d6e8dd57a566b392aee5.png#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><br>
+<strong>&#x5BF9;&#x4E8E;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#xFF0C;&#x5148;&#x5229;&#x7528; Embedding &#x5C42;&#x8FDB;&#x884C;&#x7279;&#x5F81;&#x7A20;&#x5BC6;&#x5316;&#xFF0C;&#x518D;&#x5229;&#x7528; Stacking &#x5C42;&#x8FDE;&#x63A5;&#x5176;&#x4ED6;&#x7279;&#x5F81;&#xFF0C;&#x8F93;&#x5165; MLP &#x7684;&#x591A;&#x5C42;&#x7ED3;&#x6784;&#xFF0C;&#x6700;&#x540E;&#x7528; Scoring &#x5C42;&#x9884;&#x4F30;&#x7ED3;&#x679C;&#x3002;</strong></p>
+<ul>
+<li>Feature#1 &#x4EE3;&#x8868;&#x7684;&#x662F;&#x7C7B;&#x522B;&#x578B;&#x7279;&#x5F81;&#x7ECF;&#x8FC7; One-hot &#x7F16;&#x7801;&#x540E;&#x751F;&#x6210;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x800C; Feature#2&#x4EE3;&#x8868;&#x7684;&#x662F;&#x6570;&#x503C;&#x578B;&#x7279;&#x5F81;&#x3002;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;One-hot &#x7279;&#x5F81;&#x592A;&#x7A00;&#x758F;&#x4E86;&#xFF0C;&#x4E0D;&#x9002;&#x5408;&#x76F4;&#x63A5;&#x8F93;&#x5165;&#x5230;&#x540E;&#x7EED;&#x7684;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x8FDB;&#x884C;&#x8BAD;&#x7EC3;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x8FDE;&#x63A5;&#x5230;Embedding &#x5C42;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x7A00;&#x758F;&#x7684; One-hot &#x5411;&#x91CF;&#x8F6C;&#x6362;&#x6210;&#x6BD4;&#x8F83;&#x7A20;&#x5BC6;&#x7684; Embedding &#x5411;&#x91CF;&#x3002;</li>
+<li>Embedding &#x5C42;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x628A;&#x7A00;&#x758F;&#x7684; One-hot &#x5411;&#x91CF;&#x8F6C;&#x6362;&#x6210;&#x7A20;&#x5BC6;&#x7684; Embedding &#x5411;&#x91CF;&#x800C;&#x8BBE;&#x7F6E;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;Embedding &#x5C42;&#x5E76;&#x4E0D;&#x662F;&#x5168;&#x90E8;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; Embedding &#x5C42;&#xFF0C;&#x4E0D;&#x540C;Embedding &#x5C42;&#x4E4B;&#x95F4;&#x4E92;&#x4E0D;&#x5E72;&#x6D89;&#x3002;</li>
+<li>Embedding &#x5411;&#x91CF;&#x7684;&#x7EF4;&#x5EA6;&#x5E94;&#x8FDC;&#x5C0F;&#x4E8E;&#x539F;&#x59CB;&#x7684;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x624D;&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x4ECE;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x5230;&#x7A20;&#x5BC6;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x7684;&#x8F6C;&#x6362;&#x3002;<br>
+<img src="https://img-blog.csdnimg.cn/img_convert/67d1b5da78bbe96748789ad717ec19f7.png#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></li>
+<li>Stacking&#x5C42;&#x4E2D;&#x6587;&#x540D;&#x662F;&#x5806;&#x53E0;&#x5C42;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x7ECF;&#x5E38;&#x53EB;&#x5B83;&#x8FDE;&#x63A5;&#xFF08;Concatenate&#xFF09;&#x5C42;&#x3002;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x628A;&#x4E0D;&#x540C;&#x7684; Embedding&#x7279;&#x5F81;&#x548C;&#x6570;&#x503C;&#x578B;&#x7279;&#x5F81;&#x62FC;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5F62;&#x6210;&#x65B0;&#x7684;&#x5305;&#x542B;&#x5168;&#x90E8;&#x7279;&#x5F81;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x3002;</li>
+<li>MLP &#x5C42;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8BA9;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x4E0D;&#x540C;&#x7EF4;&#x5EA6;&#x4E4B;&#x95F4;&#x505A;&#x5145;&#x5206;&#x7684;&#x4EA4;&#x53C9;&#xFF0C;&#x8BA9;&#x6A21;&#x578B;&#x80FD;&#x591F;&#x6293;&#x53D6;&#x5230;&#x66F4;&#x591A;&#x7684;&#x975E;&#x7EBF;&#x6027;&#x7279;&#x5F81;&#x548C;&#x7EC4;&#x5408;&#x7279;&#x5F81;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x5C31;&#x4F7F;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x5728;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x4E0A;&#x8F83;&#x4F20;&#x7EDF;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x5927;&#x4E3A;&#x589E;&#x5F3A;&#x3002;</li>
+<li>&#x6700;&#x540E;&#x662F; Scoring &#x5C42;&#xFF0C;&#x5B83;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x8F93;&#x51FA;&#x5C42;&#x3002;&#x867D;&#x7136;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x7684;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x590D;&#x6742;&#xFF0C;&#x4F46;&#x6700;&#x7EC8;&#x6211;&#x4EEC;&#x8981;&#x9884;&#x6D4B;&#x7684;&#x76EE;&#x6807;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x7684;&#x6982;&#x7387;&#x3002;&#x5982;&#x679C;&#x662F;&#x70B9;&#x51FB;&#x7387;&#x9884;&#x4F30;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#xFF0C;&#x800C;&#x5982;&#x679C;&#x662F;&#x7C7B;&#x4F3C;&#x56FE;&#x50CF;&#x5206;&#x7C7B;&#x8FD9;&#x6837;&#x7684;&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x5728;&#x8F93;&#x51FA;&#x5C42;&#x91C7;&#x7528; softmax &#x8FD9;&#x6837;&#x7684;&#x591A;&#x5206;&#x7C7B;&#x6A21;&#x578B;&#x3002;</li>
+</ul>
+<h1 class="mume-header" id="embeddingmlp-%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AE%9E%E6%88%98">Embedding+MLP &#x6A21;&#x578B;&#x7684;&#x5B9E;&#x6218;</h1>
+
+<h2 class="mume-header" id="%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E5%92%8C%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1">&#x7279;&#x5F81;&#x9009;&#x62E9;&#x548C;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210205034823982.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FucWkzNzc2,size_16,color_FFFFFF,t_70#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"><br>
+&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x4E86;&#x4E00;&#x4E2A;&#x4E09;&#x5C42;&#x7684; MLP &#x7ED3;&#x6784;&#xFF0C;&#x5176;&#x4E2D;&#x524D;&#x4E24;&#x5C42;&#x662F; 128 &#x7EF4;&#x7684;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x3002;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x91C7;&#x7528;&#x597D;&#x8BC4; / &#x5DEE;&#x8BC4;&#x6807;&#x7B7E;&#x4F5C;&#x4E3A;&#x6837;&#x672C;&#x6807;&#x7B7E;&#xFF0C;&#x56E0;&#x6B64;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7C7B; CTR &#x9884;&#x4F30;&#x7684;&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x91C7;&#x7528;&#x5355;&#x4E2A; sigmoid &#x795E;&#x7ECF;&#x5143;&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#x5C42;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h2 class="mume-header" id="tensorflow-%E5%AE%9E%E7%8E%B0">TensorFlow &#x5B9E;&#x73B0;</h2>
+
+<pre data-role="codeBlock" data-info class="language-"><code> 
+import tensorflow as tf
+
+TRAIN_DATA_URL = &quot;file:///Users/zhewang/Workspace/SparrowRecSys/src/main/resources/webroot/sampledata/modelSamples.csv&quot;
+samples_file_path = tf.keras.utils.get_file(&quot;modelSamples.csv&quot;, TRAIN_DATA_URL)
+</code></pre><h3 class="mume-header" id="%E8%BD%BD%E5%85%A5%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE">&#x8F7D;&#x5165;&#x8BAD;&#x7EC3;&#x6570;&#x636E;</h3>
+
+<pre data-role="codeBlock" data-info class="language-"><code>def get_dataset(file_path):
+    dataset = tf.data.experimental.make_csv_dataset(
+        file_path,
+        batch_size=12,
+        label_name=&apos;label&apos;,
+        na_value=&quot;?&quot;,
+        num_epochs=1,
+        ignore_errors=True)
+    return dataset
+# sample dataset size 110830/12(batch_size) = 9235
+raw_samples_data = get_dataset(samples_file_path)
+
+test_dataset = raw_samples_data.take(1000)
+train_dataset = raw_samples_data.skip(1000)
+
+</code></pre><h3 class="mume-header" id="%E8%BD%BD%E5%85%A5%E7%B1%BB%E5%88%AB%E5%9E%8B%E7%89%B9%E5%BE%81">&#x8F7D;&#x5165;&#x7C7B;&#x522B;&#x578B;&#x7279;&#x5F81;</h3>
+
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x7528;&#x5230;&#x7684;&#x7C7B;&#x522B;&#x578B;&#x7279;&#x5F81;&#x4E3B;&#x8981;&#x6709;&#x8FD9;&#x4E09;&#x7C7B;&#xFF0C;&#x5206;&#x522B;&#x662F; genre&#x3001;userId &#x548C; movieId&#x3002;&#x5728;&#x8F7D;&#x5165; genre &#x7C7B;&#x7279;&#x5F81;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x4E86; tf.feature_column.categorical_column_with_vocabulary_list &#x65B9;&#x6CD5;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x578B;&#x7684;&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x6210;&#x4E86; One-hot &#x7279;&#x5F81;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x8F6C;&#x6362;&#x8FC7;&#x7A0B;&#x4E2D;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E00;&#x4E2A;&#x8BCD;&#x8868;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x5728;&#x5F00;&#x5934;&#x5C31;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x5305;&#x542B;&#x6240;&#x6709; genre &#x7C7B;&#x522B;&#x7684;&#x8BCD;&#x8868; genre_vocab&#x3002;&#x5728;&#x8F6C;&#x6362; userId &#x548C; movieId &#x7279;&#x5F81;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53C8;&#x4F7F;&#x7528;&#x4E86; tf.feature_column.categorical_column_with_identity &#x65B9;&#x6CD5;&#x628A; ID &#x8F6C;&#x6362;&#x6210; One-hot &#x7279;&#x5F81;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E0D;&#x7528;&#x8BCD;&#x8868;&#xFF0C;&#x5B83;&#x4F1A;&#x76F4;&#x63A5;&#x628A; ID &#x503C;&#x5BF9;&#x5E94;&#x7684;&#x90A3;&#x4E2A;&#x7EF4;&#x5EA6;&#x7F6E;&#x4E3A; 1&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684; movieId &#x662F; 340&#xFF0C;&#x603B;&#x7684; movie &#x6570;&#x91CF;&#x662F; 1001&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x4F1A;&#x628A;&#x8FD9;&#x4E2A; 1001 &#x7EF4;&#x7684; One-hot movieId &#x5411;&#x91CF;&#x7684;&#x7B2C; 340 &#x7EF4;&#x7F6E;&#x4E3A; 1&#xFF0C;&#x5269;&#x4F59;&#x7684;&#x7EF4;&#x5EA6;&#x90FD;&#x4E3A; 0&#x3002;&#x4E3A;&#x4E86;&#x628A;&#x7A00;&#x758F;&#x7684; One-hot &#x7279;&#x5F81;&#x8F6C;&#x6362;&#x6210;&#x7A20;&#x5BC6;&#x7684; Embedding &#x5411;&#x91CF;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5728; One-hot &#x7279;&#x5F81;&#x5916;&#x5305;&#x88F9;&#x4E00;&#x5C42; Embedding &#x5C42;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230; tf.feature_column.embedding_column(movie_col, 10) &#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x4E86;&#x8FD9;&#x6837;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5B83;&#x5728;&#x628A; movie one-hot &#x5411;&#x91CF;&#x6620;&#x5C04;&#x5230;&#x4E86;&#x4E00;&#x4E2A; 10 &#x7EF4;&#x7684; Embedding &#x5C42;&#x4E0A;&#x3002;</p>
+</blockquote>
+<pre data-role="codeBlock" data-info class="language-"><code> 
+genre_vocab = [&apos;Film-Noir&apos;, &apos;Action&apos;, &apos;Adventure&apos;, &apos;Horror&apos;, &apos;Romance&apos;, &apos;War&apos;, &apos;Comedy&apos;, &apos;Western&apos;, &apos;Documentary&apos;,
+               &apos;Sci-Fi&apos;, &apos;Drama&apos;, &apos;Thriller&apos;,
+               &apos;Crime&apos;, &apos;Fantasy&apos;, &apos;Animation&apos;, &apos;IMAX&apos;, &apos;Mystery&apos;, &apos;Children&apos;, &apos;Musical&apos;]
+
+
+GENRE_FEATURES = {
+    &apos;userGenre1&apos;: genre_vocab,
+    &apos;userGenre2&apos;: genre_vocab,
+    &apos;userGenre3&apos;: genre_vocab,
+    &apos;userGenre4&apos;: genre_vocab,
+    &apos;userGenre5&apos;: genre_vocab,
+    &apos;movieGenre1&apos;: genre_vocab,
+    &apos;movieGenre2&apos;: genre_vocab,
+    &apos;movieGenre3&apos;: genre_vocab
+}
+
+
+categorical_columns = []
+for feature, vocab in GENRE_FEATURES.items():
+    cat_col = tf.feature_column.categorical_column_with_vocabulary_list(
+        key=feature, vocabulary_list=vocab)
+    emb_col = tf.feature_column.embedding_column(cat_col, 10)
+    categorical_columns.append(emb_col)
+
+
+movie_col = tf.feature_column.categorical_column_with_identity(key=&apos;movieId&apos;, num_buckets=1001)
+movie_emb_col = tf.feature_column.embedding_column(movie_col, 10)
+categorical_columns.append(movie_emb_col)
+
+
+user_col = tf.feature_column.categorical_column_with_identity(key=&apos;userId&apos;, num_buckets=30001)
+user_emb_col = tf.feature_column.embedding_column(user_col, 10)
+categorical_columns.append(user_emb_c
+</code></pre><p>&#x6570;&#x503C;&#x578B;&#x7279;&#x5F81;&#x7684;&#x5904;&#x7406;</p>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x628A;&#x7279;&#x5F81;&#x503C;&#x8F93;&#x5165;&#x5230; MLP &#x5185;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x7279;&#x5F81;&#x9010;&#x4E2A;&#x58F0;&#x660E;&#x4E3A; tf.feature_column.numeric_column &#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x5176;&#x4ED6;&#x7684;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x3002;</p>
+</blockquote>
+<pre data-role="codeBlock" data-info class="language-"><code>numerical_columns = [tf.feature_column.numeric_column(&apos;releaseYear&apos;),
+                   tf.feature_column.numeric_column(&apos;movieRatingCount&apos;),
+                     tf.feature_column.numeric_column(&apos;movieAvgRating&apos;),
+                     tf.feature_column.numeric_column(&apos;movieRatingStddev&apos;),
+                     tf.feature_column.numeric_column(&apos;userRatingCount&apos;),
+                     tf.feature_column.numeric_column(&apos;userAvgRating&apos;),
+                     tf.feature_column.numeric_column(&apos;userRatingStddev&apos;)]
+
+</code></pre><h3 class="mume-header" id="%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84">&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x7ED3;&#x6784;</h3>
+
+<blockquote>
+<p>&#x76F4;&#x63A5;&#x5229;&#x7528; DenseFeatures &#x628A;&#x7C7B;&#x522B;&#x578B; Embedding &#x7279;&#x5F81;&#x548C;&#x6570;&#x503C;&#x578B;&#x7279;&#x5F81;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x5F62;&#x6210;&#x7A20;&#x5BC6;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x4F9D;&#x6B21;&#x7ECF;&#x8FC7;&#x4E24;&#x5C42; 128 &#x7EF4;&#x7684;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7; sigmoid &#x8F93;&#x51FA;&#x795E;&#x7ECF;&#x5143;&#x4EA7;&#x751F;&#x6700;&#x7EC8;&#x9884;&#x4F30;&#x503C;&#x3002;</p>
+</blockquote>
+<pre data-role="codeBlock" data-info class="language-"><code>preprocessing_layer = tf.keras.layers.DenseFeatures(numerical_columns + categorical_columns)
+
+
+model = tf.keras.Sequential([
+    preprocessing_layer,
+    tf.keras.layers.Dense(128, activation=&apos;relu&apos;),
+    tf.keras.layers.Dense(128, activation=&apos;relu&apos;),
+    tf.keras.layers.Dense(1, activation=&apos;sigmoid&apos;),
+])
+
+</code></pre><h3 class="mume-header" id="%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E7%9B%B8%E5%85%B3%E7%9A%84%E5%8F%82%E6%95%B0">&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x8BAD;&#x7EC3;&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;</h3>
+
+<p>&#x5173;&#x4E8E;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E8C;&#x5206;&#x7C7B;&#x4EA4;&#x53C9;&#x71B5;&#xFF0C;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x4E2D;&#x5F88;&#x6D41;&#x884C;&#x7684; adam&#xFF0C;&#x6700;&#x540E;&#x662F;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x51C6;&#x786E;&#x5EA6; accuracy &#x4F5C;&#x4E3A;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#x7684;&#x6307;&#x6807;&#x3002;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>model.compile(
+    loss=&apos;binary_crossentropy&apos;,
+    optimizer=&apos;adam&apos;,
+    metrics=[&apos;accuracy&apos;])
+</code></pre><h3 class="mume-header" id="%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AE%AD%E7%BB%83%E5%92%8C%E8%AF%84%E4%BC%B0">&#x6A21;&#x578B;&#x7684;&#x8BAD;&#x7EC3;&#x548C;&#x8BC4;&#x4F30;</h3>
+
+<pre data-role="codeBlock" data-info class="language-"><code> 
+model.fit(train_dataset, epochs=10)
+
+test_loss, test_accuracy = model.evaluate(test_dataset)
+
+print(&apos;\n\nTest Loss {}, Test Accuracy {}&apos;.format(test_loss, test_accuracy)
+
+</code></pre><p><img src="https://img-blog.csdnimg.cn/20210205040257462.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FucWkzNzc2,size_16,color_FFFFFF,t_70#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+
+    
+ 
+
+                
+            </div>
+            <hr/>
+
+              
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Stella</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://anqi3776.github.io/2021/04/16/tui-jian-xi-tong/">http://anqi3776.github.io/2021/04/16/tui-jian-xi-tong/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">stella</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">推荐</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                                    <span class="chip bg-color">深度学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                    <span class="chip bg-color">推荐算法</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+             
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .mvaline-card {
+        margin: 1.5rem auto;
+    }
+
+    .mvaline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+</style>
+
+<div class="card mvaline-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="mvcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/minivaline/MiniValine.js"></script>
+<script>
+    new MiniValine({
+        el: '#mvcomments',
+        appId: 'lRn5KIt4tJJ5NQEL1MU9JAnF-gzGzoHsz',
+        appKey: 'zKG2SSyBMw28srptfNMYvWno',
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/13/li-kou-705-she-ji-ha-xi-ji-he/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="力扣705-设计哈希集合">
+                        
+                        <span class="card-title">力扣705-设计哈希集合</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            不使用任何内建的哈希表库设计一个哈希集合
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                        <span class="chip bg-color">力扣</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%80%E5%8D%95/">
+                        <span class="chip bg-color">简单</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <span class="chip bg-color">哈希表</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/05/web-apis-jian-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Web APIs 简介（JS 进阶1）">
+                        
+                        <span class="card-title">Web APIs 简介（JS 进阶1）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">ItDaChuang</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">42.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/ganming1" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:13635845781@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2224710697" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2224710697" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/xxx" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/xxx" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/xxx" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/xxx" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
