@@ -525,12 +525,11 @@
   </div>
   <div class="stackedit__right">
     <div class="stackedit__html">
-      <p></p><div class="toc"><h3>Wide&amp;Deep</h3><ul><li><a href="#WideDeep__TensorFlow__7">Wide&amp;Deep 模型的 TensorFlow 实现</a></li></ul></div><br>
-<img src="https://img-blog.csdnimg.cn/2021020504070428.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FucWkzNzc2,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>
-<img src="https://static001.geekbang.org/resource/image/fb/e0/fb17112c951ebb2a515f12dace262de0.jpg#pic_center" alt="在这里插入图片描述"><br>
+      <p></p><div class="toc"><h3>Wide&amp;Deep</h3><ul><li><a href="#WideDeep__TensorFlow__7">Wide&amp;Deep 模型的 TensorFlow 实现</a></li></ul></div>  
+ 
 Wide 部分的主要作用是让模型具有较强的“记忆能力”（Memorization），而 Deep 部分的主要作用是让模型具有“泛化能力”（Generalization），因为只有这样的结构特点，才能让模型兼具逻辑回归和深度神经网络的优点，也就是既能快速处理和记忆大量历史行为特征，又具有强大的表达能力，这就是 Google 提出这个模型的动机<p></p>
 <p>矩阵分解算法，就是为了解决协同过滤“泛化能力”不强而诞生的。因为协同过滤只会“死板”地使用用户的原始行为特征，而矩阵分解因为生成了用户和物品的隐向量，所以就可以计算任意两个用户和物品之间的相似度了。这就是泛化能力强的另一个例子。<br>
-<img src="https://img-blog.csdnimg.cn/img_convert/05cb2536b496748feb8d99553db82e16.png#pic_center" alt="在这里插入图片描述"></p>
+ </p>
 <h1><a id="WideDeep__TensorFlow__7"></a>Wide&amp;Deep 模型的 TensorFlow 实现</h1>
 <pre><code class="prism language-bash"> 
 <span class="token comment"># wide and deep model architecture</span>
